@@ -1,40 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<!-- CSS Stylesheets with Relative Paths -->
+<html lang="en-us">
 <head>
   <meta charset="UTF-8">
-  <title>Biography</title>
+  <title>Peter Resnick: Bio - Home Page</title>
+
+  <!-- This line is money! It points your HTML to the CSS file. -->
+  <!-- Notice the "relative" pathway? It matches a file inside our current directory's "assets" folder. Open it to see our style rules. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
-
 <body>
-    <h1>Peter Resnick: Bio - Home Page</h1>
-    <a target="_blank" href="https://amp.businessinsider.com/images/53712e476da811da7643cd42-750-562.jpg">
-      <img src="https://amp.businessinsider.com/images/53712e476da811da7643cd42-750-562.jpg" alt="Skyscraper">
-    </a>
 
-    <p><a href = "https://peter-resnick.github.io/any-project">Here is a test link to the `any project` page</a></p>
+    </div>
+    <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Freeosk 3P</a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <!--<li class="active"><a href="MAKE THIS A USEFUL LINK">Comparisons <span class="sr-only">(current)</span></a></li>-->
+                  <li><a href="https://github.com/freeosk/post_program_performance">Help/Documentation/Repo</a></li>
+                  <li><a href="/placements">Placements</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/efficiency">Efficiency</a></li>
+                        <li><a href="/util">Utilization</a></li>
+                        <li><a href="/errors">Errors</a></li>
+                        <li><a href='/dispense_stats'>Dispense/Stage Times</a></li>
+                        <!--<li role="separator" class="divider"></li>-->
+                        <li><a href="/fill_level">Fill Level</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Scan Behavior<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="/scans_by_kiosk">Scans By Kiosk</a></li>
+                          <li><a href="/program_scans">Scans By Program</a></li>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Auto Command Behavior<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/autos_type">Auto by Type & Initiation</a></li>
+                        <li><a href="/autos_program">Autos by Program</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      </nav>
 
-    <p> This is the first Paragraph about me </p>
-    <p> This is the second Paragraph about me </p>
+            <div class = "row" align = "center">
+              <div class "col-md-12">
+                <h2 alight = "center">Welcome To The 3P Application Home Page</h2>
+                  {% for table in tables %}
+                    {{titles[loop.index]}}
+                    {{ table|safe}}
+                  {% endfor %}
+              </div>
+            </div>
+              <!-- <table class="table table-bordered table-hover table-condensed table table-dark"> -->
+          
+              <!-- </table> -->
+              <div class = "row" align = 'center'>
+                  <p>This is a Browser-based Application Environment for 3P</p>
+                  <p>This Application examines an array of metrics that characterize the performance of Freeosk Kiosks</p>
+                  <p>This Includes: Dispense/Stage Times, Errors, Utilization, Efficiency and more</p>
+                  <p>This application was created to allow users to examine program performance as they see fit</p>
+                  <p>The intent being the dynamic nature of this platform will allow us to answer questions, both broad and defined, quickly and accurately depending on the user's  needs</p>
+                  <p>Please note that when you visit internal pages, the application is performing analysis to prepare visualizations - The time to complete this process varies by page</p>
+                  <p>Please allow 3P time to extract and refine data for consumption</p>
+                  <p>Refreshing a page will re-run that page's analytical tools</p>
+                  <p>At this time, all analysis is bound by current placements - please see the "Placements" Page for more info</p>
+                  <p>As a note, this program is built using a JS/CSS/HTML front end with a Python-based Flask App and Custom Built Python Analysis Functions (3P's beginnings)</p>
+              </div>
+              
 
-    <ul>
-        <li><a target = "_blank" href="https://www.google.com/">Google</a></li>
-        <li><a target = "_blank" href="https://www.cnn.com/>">ESPN</a></li>
-        <li><a target = "_blank" href="https://bradleybraves.com/">Bradley Braves</a></li>
 
-    <table border = "1">
-        <tr>
-            <th>Movies</th>
-            <th>Songs</th>
-            <th>Books</th>
-        </tr>
-        <tr>
-            <td>Star Wars</td>
-            <td>Colder Weather</td>
-            <td>Harry Potter</td>
-        </tr>
-    </table>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
 </body>
-
 </html>
